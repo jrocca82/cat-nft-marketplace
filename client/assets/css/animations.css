@@ -1,0 +1,50 @@
+.moving_head {
+    animation: moveHead 3s infinite;
+}
+
+.grow_head {
+    animation: growHead 3s infinite;
+}
+
+.warp_head {
+    animation: warpHead 3s infinite;
+}
+
+@keyframes moveHead {
+	0% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(5deg);
+	}
+	70% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes growHead {
+	0% {
+		transform: scale(1, 1);
+	}
+	50% {
+		transform: scale(1.2, 1.2);
+	}
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes warpHead {
+	0% {
+		transform: rotate3d(0);
+	}
+    50%{
+        transform: rotate3d(1, 1, 1, 270deg);
+    }
+	100% {
+		transform: rotate3d(0);
+	}
+}
