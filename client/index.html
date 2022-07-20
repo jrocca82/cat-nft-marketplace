@@ -16,6 +16,12 @@
 		<link rel="stylesheet" href="assets/css/animations.css" />
 		<link rel="stylesheet" href="assets/css/tab-styles.css" />
 		<script src="assets/js/tabFunctions.js"></script>
+		<script type="module" src="assets/js/KittyContract.js"></script>
+		<script type="module" src="assets/js/eth.js"></script>
+		<script
+			src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+			type="application/javascript"
+		></script>
 	</head>
 	<body>
 		<div class="container p-5" style="margin-top: 12vh; margin-bottom: 10vh">
@@ -244,8 +250,9 @@
 							Randomize
 						</button>
 						<button id="reset" type="button" class="btn btn-dark" onclick="resetKitty()">Reset</button>
-						<button type="button" class="btn btn-dark">Create</button>
+						<button type="button" class="btn btn-dark" onclick="createKitty()">Create</button>
 					</div>
+					<div class="alert alert-success" role="alert" id="kittyCreation" style="display:none"></div>
 				</div>
 			</div>
 		</div>
